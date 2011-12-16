@@ -13,6 +13,8 @@ setup(name='collective.portlet.colorcollection',
       classifiers=[
         "Framework :: Plone",
         "Framework :: Plone :: 3.3",
+        "Framework :: Plone :: 4.0",
+        "Framework :: Plone :: 4.1",
         "Development Status :: 4 - Beta",
         "Programming Language :: Python",
         "Intended Audience :: Developers",
