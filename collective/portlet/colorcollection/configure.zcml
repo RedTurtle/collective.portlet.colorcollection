@@ -16,7 +16,7 @@
        />
 
     <plone:portletRenderer
-        portlet="plone.portlet.collection.collection.ICollectionPortlet"
+        portlet="plone.portlet.collection.collection.Assignment"
         layer=".interfaces.IColorCollectionLayer"
 		class=".colorcollection.ColorCollectionRenderer"
         />

@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1.0'
+version = '0.2.0'
 
 setup(name='collective.portlet.colorcollection',
       version=version,
@@ -15,6 +15,7 @@ setup(name='collective.portlet.colorcollection',
         "Framework :: Plone :: 3.3",
         "Framework :: Plone :: 4.0",
         "Framework :: Plone :: 4.1",
+        "Framework :: Plone :: 4.2",
         "Development Status :: 4 - Beta",
         "Programming Language :: Python",
         "Intended Audience :: Developers",
