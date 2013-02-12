@@ -26,10 +26,12 @@
         tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
         <a href="#"
            class="tile"
-		   tal:define="color obj/color|nothing"
+		   tal:define="color obj/color|nothing;
+		   			   color_class python: color and color.startswith('Class-')"
            tal:attributes="href itemUrl;
                            title obj/Description;
-						   style python:color and 'color:%s' % color or None">
+						   style python:(color and not color_class) and 'color:%s' % color or None;
+						   class python:color_class and color or ''">
             <img tal:replace="structure item_icon/html_tag" />
             <span tal:replace="obj/pretty_title_or_id">
              Title
