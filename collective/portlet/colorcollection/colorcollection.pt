@@ -5,7 +5,8 @@
                 toLocalizedTime nocall:plone_view/toLocalizedTime;
                 viewActions here/portal_properties/site_properties/typesUseViewActionInListings|python:();
                 getIcon nocall:plone_view/getIcon;
-                custom_class python:1 and view.css_class() or ''"
+                css_class view/css_class|nothing;
+                custom_class python:css_class and css_class or ''"
     tal:attributes="class string:portlet portletCollection ${custom_class}">
 
     <dt class="portletHeader">
