@@ -35,6 +35,9 @@ __ http://plone.org/documentation/manual/developer-manual/indexing-and-searching
 The color format must be CSS valid. So: 'red', '#FF0000', '#F00' or 'rgb(255,0,0)' are
 all good values.
 
+If you return a string that starts with 'class-' (like 'class-foo'), this doesn't apply the style attribute
+but a ``class="foo"`` attribute.
+
 Credits
 =======
 
