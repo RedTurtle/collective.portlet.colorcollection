@@ -22,17 +22,18 @@
         tal:define="oddrow repeat/obj/odd;
                     useView python:obj.portal_type in viewActions;
                     itemUrl python:useView and obj.getURL() + '/view' or obj.getURL();
-                    item_icon python:getIcon(obj);"
+                    item_icon python:getIcon(obj);
+                    color obj/color|nothing;
+					color_class python: color and color.startswith('class-');
+					color_class_value python:color_class and color.replace('class-','') or '';
+					class_value python:oddrow and 'portletItem even' or 'portletItem odd'"
 
-        tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
+        tal:attributes="class string:${class_value} ${color_class_value}">
         <a href="#"
            class="tile"
-		   tal:define="color obj/color|nothing;
-		   			   color_class python: color and color.startswith('class-')"
            tal:attributes="href itemUrl;
                            title obj/Description;
-						   style python:(color and not color_class) and 'color:%s' % color or None;
-						   class python:color_class and color.replace('class-','') or None">
+						   style python:(color and not color_class) and 'color:%s' % color or None;">
             <img tal:replace="structure item_icon/html_tag" />
             <span tal:replace="obj/pretty_title_or_id">
              Title
